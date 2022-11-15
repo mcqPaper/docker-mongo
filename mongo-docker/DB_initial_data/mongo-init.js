@@ -1,9 +1,9 @@
 // create mongodb user
 db.createUser(
     {
-      user: "dataset_devuser",
-      pwd:  "dev63784_Dataset",
-      roles: [ { role: "readWrite", db: "datasetDB" } ],
+      user: "quiz_devuser",
+      pwd:  "dev63784_Quiz",
+      roles: [ { role: "readWrite", db: "quizDB" } ],
       mechanisms:["SCRAM-SHA-1"]
     }
   );
