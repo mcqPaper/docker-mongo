@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  dataset_mongodb:
+      image: mongo:latest
+      restart: always
+      ports:
+        - 47017:27017
+      volumes:
+        - ./mongoData:/data/db
+        - ./DB_initial_data/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      environment:
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=PsswrdDataSEt_5Kght4rgHAdmin
+        - MONGO_INITDB_DATABASE=datasetDB
